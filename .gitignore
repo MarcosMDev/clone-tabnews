@@ -28,8 +28,8 @@ node_modules/
 *.tgz
 
 # dotenv environment variables
-.env
-.env.*.local
+# .env
+# .env.*.local
 
 # parcel-bundler cache (optional)
 .cache
