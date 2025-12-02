@@ -40,7 +40,7 @@ export default async function migrations(request, response) {
     return response.status(405).json({ message: "Method not allowed" });
   } catch (error) {
     await dbClient.end();
-    console.error(error);
+    throw error;
   } finally {
     await dbClient.end();
   }
