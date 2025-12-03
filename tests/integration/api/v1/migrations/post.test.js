@@ -1,4 +1,9 @@
 import database from "infra/database.js";
+import orchestretor from "tests/orchestretor";
+
+beforeAll(async () => {
+  await orchestretor.waitForAllServices();
+});
 
 beforeAll(cleanDatabase);
 
