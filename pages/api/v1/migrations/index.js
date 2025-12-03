@@ -3,9 +3,9 @@ import { join } from "node:path";
 import database from "infra/database";
 
 export default async function migrations(request, response) {
-  const allowedMethos = ["GET", "POST"];
+  const allowedMethods = ["GET", "POST"];
 
-  if (!allowedMethos.includes(request.method)) {
+  if (!allowedMethods.includes(request.method)) {
     return response
       .status(405)
       .json({ error: `Method ${request.method} not allowed` });
